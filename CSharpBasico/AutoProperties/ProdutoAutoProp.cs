@@ -1,32 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
-namespace CSharpBasico.Construtores
+namespace CSharpBasico.AutoProperties
 {
-    class Produto
+    class ProdutoAutoProp
     {
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string _nome;
+        public double Preco { get; private set; }
+        public int Quantidade { get; private set; }
 
         //Construtor
-        public Produto(string nome, double preco, int quantidade)
+        public ProdutoAutoProp(string nome, double preco, int quantidade)
         {
-            Nome = nome;
+            _nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
 
-        //Sobrecarga construtor
-        public Produto(string nome, double preco)
+        public string Nome
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = 0;
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
         }
 
         public double ValorTotalEmEstoque()
@@ -43,7 +42,7 @@ namespace CSharpBasico.Construtores
         }
         public override string ToString()
         {
-            return Nome
+            return _nome
             + ", $ "
             + Preco.ToString("F2", CultureInfo.InvariantCulture)
             + ", "
