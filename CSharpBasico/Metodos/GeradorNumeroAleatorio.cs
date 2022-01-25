@@ -1,4 +1,4 @@
-﻿namespace CSharpBasico.Metodos
+﻿namespace CSharpMethods.Metodos
 {
     public class GeradorNumeroAleatorio
     {

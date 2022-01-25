@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpBasico.Construtores
+namespace CSharpMethods.Construtores
 {
     class Produto
     {

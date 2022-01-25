@@ -1,9 +1,9 @@
-﻿using CSharpBasico.Construtores;
-using CSharpBasico.Dtos;
-using CSharpBasico.Encapsulamento;
-using CSharpBasico.Funcoes;
-using CSharpBasico.Metodos;
-using CSharpBasico.Properties;
+﻿using CSharpMethods.Construtores;
+using CSharpMethods.Dtos;
+using CSharpMethods.Encapsulamento;
+using CSharpMethods.Funcoes;
+using CSharpMethods.Metodos;
+using CSharpMethods.Properties;
 using System.Globalization;
 
 #region GeradorAleatorio
@@ -11,7 +11,6 @@ using System.Globalization;
 //var numeroConcatenado = GeradorNumeroAleatorio.GeradorConcat();
 //Console.WriteLine(numeroRange);
 //Console.WriteLine(numeroConcatenado);
-
 #endregion
 #region Trabalhando Com Datas
 //var dataAtual = DateTime.Now;
@@ -42,7 +41,7 @@ using System.Globalization;
 //int quantidade = int.Parse(Console.ReadLine());
 
 ////Construtor
-//Produto p = new Produto(nome, preco, quantidade);
+//Produto p = new(nome, preco, quantidade);
 ////Construtor sobrecarga
 //Produto p2 = new Produto(nome, preco);
 
@@ -60,24 +59,21 @@ using System.Globalization;
 //p.RemoverProdutos(qte);
 //Console.WriteLine();
 //Console.WriteLine("Dados atualizados: " + p);
-
 #endregion
 #region Encapsulmaento
-//ProdutoEncap p = new ProdutoEncap("TV", 500.00, 10);
+//ProdutoEncap p = new("TV", 500.00, 10);
 
 //p.SetNome("TV 4k");
 
 //Console.WriteLine(p.GetNome());
 #endregion
 #region Properties
-//ProdutoProp p = new ProdutoProp("TV", 500.00, 10);
-
+//ProdutoProp p = new("TV", 500.00, 10);
 //p.Nome = "TV 4k";
-
 //Console.WriteLine(p.Nome);
 #endregion
 #region Vetores Struct
-//Somar altura e exibir a media
+////Somar altura e exibir a media 8
 //int tamanhoVetor = int.Parse(Console.ReadLine());
 
 //double[] vect = new double[tamanhoVetor];
@@ -88,7 +84,7 @@ using System.Globalization;
 //}
 
 //double sum = 0.0;
-//for(int i = 0;i < tamanhoVetor; i++)
+//for (int i = 0; i < tamanhoVetor; i++)
 //{
 //    sum += vect[i];
 //}
@@ -96,7 +92,6 @@ using System.Globalization;
 //double avg = sum / tamanhoVetor;
 
 //Console.WriteLine("Altura media é: " + avg.ToString("F2", CultureInfo.InvariantCulture));
-
 #endregion
 #region Vetores Tipo Classe
 //int n = int.Parse(Console.ReadLine());
@@ -119,7 +114,6 @@ using System.Globalization;
 //double avg = sum / n;
 
 //Console.WriteLine("Preço medio = " + avg.ToString("F2", CultureInfo.InvariantCulture));
-
 #endregion
 #region Modificador de Parametros params
 //int s1 = Calculator.Sum(2, 3, 4);
@@ -185,31 +179,23 @@ using System.Globalization;
 //}
 #endregion
 #region Matrizes
-//double[,] mat = new double[2,3];
+//double[,] mat = new double[2, 3];
 //Console.WriteLine(mat.Length); //{6} total elementos dentro da matriz
 //Console.WriteLine(mat.Rank); //{2} quanto e a primeira dimensão da matriz
 //Console.WriteLine(mat.GetLength(0)); //{2} a primeira dimensão da matriz tem tamanho 2
 //Console.WriteLine(mat.GetLength(1)); //{2} a segunda dimensão da matriz tem tamanho 3
-#endregion
-#region Switch
+//#endregion
+//#region Switch
 //int x = int.Parse(Console.ReadLine());
 //string day;
 
-//switch (x)
+//day = x switch
 //{
-//    case 1:
-//        day = "Sunday";
-//        break;
-//    case 2:
-//        day = "Monday";
-//        break;
-//    case 3:
-//        day = "Tuesday";
-//        break;
-//    default:
-//        day = "Invalid value";
-//        break;
-//}
+//    1 => "Sunday",
+//    2 => "Monday",
+//    3 => "Tuesday",
+//    _ => "Invalid value",
+//};
 
 //Console.WriteLine("Day " + day);
 #endregion
@@ -271,21 +257,21 @@ using System.Globalization;
 //TimeSpan t = da2.Subtract(da1);//diferenca entre data 1 e data 2
 #endregion
 #region TimeSpan
-//TimeSpan t1 = new TimeSpan(1, 12, 30);//hora/minuto/segundo
-//TimeSpan t2 = new TimeSpan(1, 2, 11, 21);//dia/hora/minuto/segundo
-//TimeSpan t3 = new TimeSpan(1, 2, 11, 21, 321);//dia/hora/minuto/segundo/milisegundos
+TimeSpan t1 = new(1, 12, 30);//hora/minuto/segundo
+TimeSpan t2 = new(days: 1, 2, 11, 21);//dia/hora/minuto/segundo
+TimeSpan t3 = new(1, 2, 11, 21, 321);//dia/hora/minuto/segundo/milisegundos
 
-//TimeSpan t4 = TimeSpan.FromDays(1.5);//cria um TimeSpan de 1 dia e 12 horas (1 dia e meio)
-//TimeSpan t5 = TimeSpan.FromHours(1.5);//cria um TimeSpan de 1 hora e 30 minutos
+TimeSpan t4 = TimeSpan.FromDays(1.5);//cria um TimeSpan de 1 dia e 12 horas (1 dia e meio)
+TimeSpan t5 = TimeSpan.FromHours(1.5);//cria um TimeSpan de 1 hora e 30 minutos
 
-//Console.WriteLine("Dias" + t2.Days);
-//Console.WriteLine("Horas" + t2.Hours);
-//Console.WriteLine("Minutos" + t2.Minutes);
-//Console.WriteLine("Total Dia" + t2.TotalDays);
-//Console.WriteLine("Total Hora" + t2.Hours);
+Console.WriteLine("Dias" + t2.Days);
+Console.WriteLine("Horas" + t2.Hours);
+Console.WriteLine("Minutos" + t2.Minutes);
+Console.WriteLine("Total Dia" + t2.TotalDays);
+Console.WriteLine("Total Hora" + t2.Hours);
 
-//TimeSpan sum = t1.Add(t2);//Soma t1 com t2
-//TimeSpan dif = t2.Subtract(t1);//subitrai t2 com t1
-//TimeSpan mult = t2.Multiply(2.0);//Multiplica t2 por 2
-//TimeSpan div = t2.Divide(2.0);//Divide t2 por 2
+TimeSpan sum = t1.Add(t2);//Soma t1 com t2
+TimeSpan dif = t2.Subtract(t1);//subitrai t2 com t1
+TimeSpan mult = t2.Multiply(2.0);//Multiplica t2 por 2
+TimeSpan div = t2.Divide(2.0);//Divide t2 por 2
 #endregion

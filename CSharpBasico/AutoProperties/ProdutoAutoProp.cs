@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace CSharpBasico.AutoProperties
+namespace CSharpMethods.AutoProperties
 {
     class ProdutoAutoProp
     {

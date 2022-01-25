@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace CSharpBasico.Encapsulamento
+namespace CSharpMethods.Encapsulamento
 {
     class ProdutoEncap
     {

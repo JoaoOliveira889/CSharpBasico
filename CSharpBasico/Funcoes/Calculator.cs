@@ -1,4 +1,4 @@
-﻿namespace CSharpBasico.Funcoes
+﻿namespace CSharpMethods.Funcoes
 {
     public class Calculator
     {
