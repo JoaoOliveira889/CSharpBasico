@@ -1,4 +1,4 @@
-﻿namespace Heranca.Entities
+﻿namespace Inheritance.Entities
 {
     internal class SavingsAccount : Account
     {
@@ -13,6 +13,12 @@
         public void UpdateBalance()
         {
             Balance += Balance * InterestRate;
+        }
+
+        public override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 2.0;
         }
     }
 }

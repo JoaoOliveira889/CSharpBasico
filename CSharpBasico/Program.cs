@@ -12,6 +12,7 @@ using System.Globalization;
 //Console.WriteLine(numeroRange);
 //Console.WriteLine(numeroConcatenado);
 #endregion
+
 #region Trabalhando Com Datas
 //var dataAtual = DateTime.Now;
 //var subtraiDia = ManipulacaoDatas.SubtraiDias(dataAtual, 1);
@@ -28,6 +29,7 @@ using System.Globalization;
 //Console.WriteLine(subtraiAno);
 //Console.WriteLine(AcrescentaAno);
 #endregion
+
 #region Construtores
 //Console.WriteLine("Entre os dados do produto:");
 
@@ -60,6 +62,7 @@ using System.Globalization;
 //Console.WriteLine();
 //Console.WriteLine("Dados atualizados: " + p);
 #endregion
+
 #region Encapsulmaento
 //ProdutoEncap p = new("TV", 500.00, 10);
 
@@ -67,11 +70,13 @@ using System.Globalization;
 
 //Console.WriteLine(p.GetNome());
 #endregion
+
 #region Properties
 //ProdutoProp p = new("TV", 500.00, 10);
 //p.Nome = "TV 4k";
 //Console.WriteLine(p.Nome);
 #endregion
+
 #region Vetores Struct
 ////Somar altura e exibir a media 8
 //int tamanhoVetor = int.Parse(Console.ReadLine());
@@ -93,6 +98,7 @@ using System.Globalization;
 
 //Console.WriteLine("Altura media é: " + avg.ToString("F2", CultureInfo.InvariantCulture));
 #endregion
+
 #region Vetores Tipo Classe
 //int n = int.Parse(Console.ReadLine());
 
@@ -115,11 +121,13 @@ using System.Globalization;
 
 //Console.WriteLine("Preço medio = " + avg.ToString("F2", CultureInfo.InvariantCulture));
 #endregion
+
 #region Modificador de Parametros params
 //int s1 = Calculator.Sum(2, 3, 4);
 
 //Console.WriteLine(s1);
 #endregion
+
 #region Lista
 //List<string> list = new();
 ////Método Add
@@ -178,6 +186,7 @@ using System.Globalization;
 //    Console.WriteLine(item);
 //}
 #endregion
+
 #region Matrizes
 //double[,] mat = new double[2, 3];
 //Console.WriteLine(mat.Length); //{6} total elementos dentro da matriz
@@ -199,11 +208,13 @@ using System.Globalization;
 
 //Console.WriteLine("Day " + day);
 #endregion
+
 #region Condicional Ternária
 //double preco = 34.5;
 //double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
 //Console.WriteLine(desconto);
 #endregion
+
 #region Funções string
 //string original = "abcde FGET AVS asbc   ";
 //string s1 = original.ToUpper();//Transforma em maiuscula
@@ -223,6 +234,7 @@ using System.Globalization;
 
 //Console.WriteLine(s5);
 #endregion
+
 #region DateTime
 //DateTime d = new(2022, 3, 17, 13, 45, 58, 276);
 
@@ -256,6 +268,7 @@ using System.Globalization;
 //DateTime da2 = new(2022, 10, 18);
 //TimeSpan t = da2.Subtract(da1);//diferenca entre data 1 e data 2
 #endregion
+
 #region TimeSpan
 TimeSpan t1 = new(1, 12, 30);//hora/minuto/segundo
 TimeSpan t2 = new(days: 1, 2, 11, 21);//dia/hora/minuto/segundo

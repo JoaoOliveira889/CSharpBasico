@@ -1,4 +1,4 @@
-﻿namespace Heranca.Entities
+﻿namespace Inheritance.Entities
 {
     internal class BusinessAccount : Account
     {
