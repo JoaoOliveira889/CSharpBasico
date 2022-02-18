@@ -1,4 +1,6 @@
-﻿string sourcePath = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\file1.txt";
+﻿using WorkingWithFiles.Entities;
+
+string sourcePath = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\file1.txt";
 string targetPath = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\file2.txt";
 
 #region FileInfo
@@ -20,7 +22,7 @@ string targetPath = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\
 //    Console.WriteLine(ex.Message);
 //}
 #endregion
-#region FileStream e StreamReader
+#region FileStream and StreamReader
 //try
 //{
 //    using (StreamReader sr = File.OpenText(sourcePath))
@@ -55,7 +57,7 @@ string targetPath = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\
 //    Console.WriteLine(ex.Message);
 //}
 #endregion
-#region Directory e DirectoryInfo
+#region Directory and DirectoryInfo
 //string path = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\myfolder";
 
 //try
@@ -89,13 +91,40 @@ string targetPath = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\
 //}
 #endregion
 #region Path
-string path = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\file1.txt";
-Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
-Console.WriteLine("PathSeparator: " + Path.PathSeparator);
-Console.WriteLine("GetTempPath: " + Path.GetTempPath());
-Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
-Console.WriteLine("GetFileName: " + Path.GetFileName(path));
-Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
-Console.WriteLine("GetExtension: " + Path.GetExtension(path));
-Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
+//string path = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\file1.txt";
+//Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
+//Console.WriteLine("PathSeparator: " + Path.PathSeparator);
+//Console.WriteLine("GetTempPath: " + Path.GetTempPath());
+//Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
+//Console.WriteLine("GetFileName: " + Path.GetFileName(path));
+//Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
+//Console.WriteLine("GetExtension: " + Path.GetExtension(path));
+//Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
+#endregion
+
+#region csv Working
+string listEmployees = @"C:\Users\jpoli\source\repos\CSharpBasico\WorkingWithFiles\employees.txt";
+try
+{
+    using StreamReader sr = new(listEmployees);
+    List<Employee> list = new();
+
+    while (!sr.EndOfStream)
+    {
+        list.Add(new Employee(sr.ReadLine()));
+    }
+
+    list.Sort();
+
+    foreach (Employee emp in list)
+    {
+        Console.WriteLine(emp);
+    }
+}
+catch (IOException e)
+{
+
+    Console.WriteLine("Error");
+    Console.WriteLine(e.Message);
+}
 #endregion
