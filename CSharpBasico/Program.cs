@@ -270,21 +270,27 @@ using System.Globalization;
 #endregion
 
 #region TimeSpan
-TimeSpan t1 = new(1, 12, 30);//hora/minuto/segundo
-TimeSpan t2 = new(days: 1, 2, 11, 21);//dia/hora/minuto/segundo
-TimeSpan t3 = new(1, 2, 11, 21, 321);//dia/hora/minuto/segundo/milisegundos
+//TimeSpan t1 = new(1, 12, 30);//hora/minuto/segundo
+//TimeSpan t2 = new(days: 1, 2, 11, 21);//dia/hora/minuto/segundo
+//TimeSpan t3 = new(1, 2, 11, 21, 321);//dia/hora/minuto/segundo/milisegundos
 
-TimeSpan t4 = TimeSpan.FromDays(1.5);//cria um TimeSpan de 1 dia e 12 horas (1 dia e meio)
-TimeSpan t5 = TimeSpan.FromHours(1.5);//cria um TimeSpan de 1 hora e 30 minutos
+//TimeSpan t4 = TimeSpan.FromDays(1.5);//cria um TimeSpan de 1 dia e 12 horas (1 dia e meio)
+//TimeSpan t5 = TimeSpan.FromHours(1.5);//cria um TimeSpan de 1 hora e 30 minutos
 
-Console.WriteLine("Dias" + t2.Days);
-Console.WriteLine("Horas" + t2.Hours);
-Console.WriteLine("Minutos" + t2.Minutes);
-Console.WriteLine("Total Dia" + t2.TotalDays);
-Console.WriteLine("Total Hora" + t2.Hours);
+//Console.WriteLine("Dias" + t2.Days);
+//Console.WriteLine("Horas" + t2.Hours);
+//Console.WriteLine("Minutos" + t2.Minutes);
+//Console.WriteLine("Total Dia" + t2.TotalDays);
+//Console.WriteLine("Total Hora" + t2.Hours);
 
-TimeSpan sum = t1.Add(t2);//Soma t1 com t2
-TimeSpan dif = t2.Subtract(t1);//subitrai t2 com t1
-TimeSpan mult = t2.Multiply(2.0);//Multiplica t2 por 2
-TimeSpan div = t2.Divide(2.0);//Divide t2 por 2
+//TimeSpan sum = t1.Add(t2);//Soma t1 com t2
+//TimeSpan dif = t2.Subtract(t1);//subitrai t2 com t1
+//TimeSpan mult = t2.Multiply(2.0);//Multiplica t2 por 2
+//TimeSpan div = t2.Divide(2.0);//Divide t2 por 2
 #endregion
+
+
+
+
+   
+
